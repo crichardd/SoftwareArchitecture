@@ -2,12 +2,11 @@ import time
 
 
 class Task:
-    def __init__(self, name, date=None, finished=False):
+    def __init__(self, name):
         """
         Initialise une nouvelle tâche.
 
         :param name: Le nom de la tâche.
-        :param finished: Statut d'achèvement de la tâche (par défaut False).
         """
         self.name = name
         self.date = time.time()
@@ -35,5 +34,7 @@ class Task:
         """
         Renvoie une représentation en chaîne de la tâche.
         """
+        elapsed_time = time.time() - self.date
+        print(elapsed_time)
         status = 'X' if self.finished else ' '
         return f"[{status}] {self.name}"
