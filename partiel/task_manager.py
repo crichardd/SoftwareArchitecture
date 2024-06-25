@@ -4,7 +4,7 @@ from src.task_repository import TaskRepository
 from src.task import Task
 
 
-task_repository = TaskRepository("../tasks.json")
+task_repository = TaskRepository("tasks.json")
 
 
 def add_task(task_content: str):
