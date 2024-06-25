@@ -1,4 +1,4 @@
-from datetime import datetime
+import time
 
 
 class Task:
@@ -10,8 +10,23 @@ class Task:
         :param finished: Statut d'achèvement de la tâche (par défaut False).
         """
         self.name = name
-        self.date = date if date is not None else datetime.now()
-        self.finished = finished
+        self.date = time.time()
+        self.finished = False
+
+    def to_dict(self):
+        return {
+            "name": self.name,
+            "date": self.date,
+            "finished": self.finished
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            name=data['name'],
+            date=data['date'],
+            finished=data['finished']
+        )
 
     def mark_finished(self):
         self.finished = True
