@@ -5,20 +5,21 @@
 ## Ajouter une tâche
 
 ```
-python taskmanager add {taskContent}
-```
-
-## Lister mes tâches
-
-```
-myapp {command} {arguments}
+python taskmanager.py add "{taskContent}"
 ```
 
 ## Mettre une tâche en terminé
 
 ```
-rapport myapp terminé
+python taskmanager.py finish {taskId}
 ```
+
+## Lister mes tâches
+
+```
+python taskmanager.py list
+```
+
 
 ## information de group
 Groupe ABC

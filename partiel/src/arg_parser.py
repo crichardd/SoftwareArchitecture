@@ -16,8 +16,6 @@ def create_parser():
     # Commande 'list'
     parser_list = subparsers.add_parser('list', help='Lister toutes les tâches (de la plus récente à la plus ancienne')
 
-    args = parser.parse_args()
-
     return parser
 
 
