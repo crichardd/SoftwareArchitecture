@@ -20,4 +20,5 @@ class Task:
         """
         Renvoie une représentation en chaîne de la tâche.
         """
-        return f"Task(name={self.name}, finished={self.finished})"
+        status = 'X' if self.finished else ' '
+        return f"[{status}] {self.name}"
